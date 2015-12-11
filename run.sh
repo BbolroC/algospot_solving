@@ -2,5 +2,5 @@
 
 ./build.sh
 
-docker run --rm -it --name algospot-playground algospot-playground-img bash
+docker run --rm -it -v $(pwd)/src/:/home/bbolroc/algospot --name algospot-playground algospot-playground-img bash
 
