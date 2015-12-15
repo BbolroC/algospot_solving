@@ -53,7 +53,8 @@ int main() {
 		int left = realize_string(op_left[i]);
 		int right = realize_string(op_right[i]);
 		int res = realize_string(op_res[i]);
-		switch (tmp) {
+		yes_or_no[i] = true;
+		switch (op[i]) {
 			case '+':
 				tmp_res = left + right;
 				break;
@@ -69,17 +70,27 @@ int main() {
 				else
 					yes_or_no[i] = false;
 				break;
+			default:
+				yes_or_no[i] = false;
 		}
+		if (tmp_res > 10 || tmp_res < 0)
+			yes_or_no[i] = false;
+		if (tmp_res != res)
+			yes_or_no[i] = false;
 	}
 
 	for (int i = 0; i < num_case; ++i) {
-		 cout << op_left[i] << " " << op[i] << " " << op_right[i] << " " << tmp << " " << op_res[i] << endl;
+		if (yes_or_no[i])
+			 cout << "Yes" << endl;
+		else
+			cout << "No" << endl;
 	}
 
 	delete op_left;
 	delete op_right;
 	delete op;
 	delete op_res;
+	delete yes_or_no;
 
 	return 0;
 }
