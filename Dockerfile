@@ -21,7 +21,10 @@ ENV GOPATH /home/bbolroc/algospot/go
 RUN echo "alias ls='ls --color'" >> /home/bbolroc/.bashrc
 RUN apt-get install gdb -y
 RUN apt-get install ruby-full -y
-RUN apt-get install curl -y
+RUN apt-get install curl cmake -y
+RUN git clone https://github.com/stevedekorte/io.git && \
+cd io && mkdir build && cd build && cmake .. && make install && cd ../.. && \
+rm -rf ./io
 
 RUN echo "alias irb='irb --prompt-mode simple'" >> /home/bbolroc/.bashrc
 RUN clear
