@@ -2,3 +2,4 @@ bin/
 sol
 *.swp
 *.class
+.DS_Store

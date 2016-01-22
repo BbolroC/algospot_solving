@@ -1,0 +1,16 @@
+<html>
+<head>
+	<script>
+		function outerFunction(name) {
+			var output = 'Hello ' + name + '..!';
+			return function() {
+				alert(output);
+			};
+		}
+		outerFunction('Bbolroc')();
+	</script>
+</head>
+<body>
+</body>
+</html>
+

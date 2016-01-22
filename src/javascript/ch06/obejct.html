@@ -1,0 +1,36 @@
+<html>
+<head>
+	<script>
+		var students = [];
+		students.push({ name: 'one', s1: 87, s2: 98, s3: 88, s4: 95 });
+		students.push({ name: 'two', s1: 92, s2: 98, s3: 96, s4: 98 });
+		students.push({ name: 'three', s1: 76, s2: 96, s3: 94, s4: 90 });
+		students.push({ name: 'four', s1: 98, s2: 92, s3: 96, s4: 92 });
+		students.push({ name: 'five', s1: 95, s2: 98, s3: 98, s4: 98 });
+		students.push({ name: 'six', s1: 64, s2: 88, s3: 92, s4: 92 });
+		students.push({ name: 'seven', s1: 82, s2: 86, s3: 98, s4: 88 });
+		students.push({ name: 'eight', s1: 88, s2: 74, s3: 78, s4: 92 });
+		students.push({ name: 'nine', s1: 97, s2: 92, s3: 88, s4: 95 });
+		students.push({ name: 'ten', s1: 45, s2: 52, s3: 72, s4: 78 });
+
+		for (var i in students) {
+			students[i].getSum = function() {
+				return this.s1 + this.s2 + this.s3 + this.s4;
+			};
+			students[i].getAvg = function() {
+				return this.getSum() / 4;
+			};
+		}
+
+		var output = 'name\tsum\tavg\n';
+		for (var i in students) {
+			with(students[i]) {
+				output += name + '\t' + getSum() + '\t' + getAvg() + '\n';
+			}
+		}
+		alert(output);
+	</script>
+</head>
+<body>
+</body>
+</html>
