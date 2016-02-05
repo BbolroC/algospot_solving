@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title> event jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+</head>
+<body>
+	<h1 id="first">First!</h1>
+	<h2 id="second">Second!</h2>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$("h1").bind("click", function () {
+			$("#first").after("<h1>H1을 추가했습니다(클릭불가)</h1>");
+		});
+		$("h2").live("click", function() {
+			$("#second").after("<h2>H2를 추가했습니다(클릭가능)</h2>");
+		});
+	</script>
+</body>
+</html>

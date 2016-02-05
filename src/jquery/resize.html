@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title> resize in/out jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+</head>
+<body>
+	<h1 id="memo"></h1>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		var i = 0;
+		$(window).on("resize", function() {
+			$("#memo").html("resize 감지" + ++i);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title> focus in/out jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+</head>
+<body>
+	<h1 id="first" style="background-color:pink">First!</h1>
+	<input id="text" type="text" />
+	<input id="check" type="checkbox" />
+	<h1 id="memo"></h1>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$("body").on("focusin", "#first", function() {
+			$("#memo").html("First에서 focusin 감지");
+		});
+		$("body").on("focusin", "#text", function() {
+			$("#memo").html("input text에서 focusin 감지");
+		});
+		$("body").on("focusout", "#text", function() {
+			$("#memo").html("input text에서 focusout 감지");
+		});
+		$("body").on("focusin", "#check", function() {
+			$("#memo").html("checkbox에서 focusin 감지");
+		});
+	</script>
+</body>
+</html>

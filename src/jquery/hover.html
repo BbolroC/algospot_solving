@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title> hover jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<h1 id="first" style="background-color:pink">First!</h1>
+	<h1 id="hover_memo"></h1>
+	<h1 id="mouse_memo"></h1>
+	<script>
+		$("body").on("hover", "#first", function() {
+			$("#hover_memo").html("hover 감지").fadeIn(1000).fadeOut(1000);
+		});
+		$("body").on("mouseover", "#first", function() {
+			$("#mouse_memo").html("mouseover  감지").fadeIn(1000).fadeOut(1000);
+		});
+		$("body").on("mouseout", "#first", function() {
+			$("#mouse_memo").html("mouseout 감지").fadeIn(1000).fadeOut(1000);
+		});
+	</script>
+</body>
+</html>

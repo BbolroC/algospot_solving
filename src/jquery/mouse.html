@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title> mouse jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<h1 id="first" style="background-color:pink">First!</h1>
+	<h1 id="second" style="background-color:gray">Second!</h1>
+	<script>
+		$("body").on("mousedown", "#first", function() {
+			alert("first에서 mousedown 감지");
+		});
+		$("body").on("mouseup", "#second", function() {
+			alert("second에서 mouseup 감지");
+		});
+	</script>
+</body>
+</html>

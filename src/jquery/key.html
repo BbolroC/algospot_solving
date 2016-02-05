@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title> key jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<h1 id="first">First!</h1>
+	<input id="text" type="text" />
+	<input id="check" type="checkbox" />
+	<script>
+		$(document).on("keydown", "body", function(e) {
+			if (e.keyCode == 17) {
+				alert("<body> ctl 감지");
+			}
+		});
+	</script>
+</body>
+</html>

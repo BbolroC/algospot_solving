@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title> multi event jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+</head>
+<body>
+	<input id="text" type="text" />
+	<h1 id="memo"></h1>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$("#text").on("focusin focusout mousedown click keydown", function(event) {
+			$("#memo").html("이벤트 감지: " + event.type);
+		});
+	</script>
+</body>
+</html>

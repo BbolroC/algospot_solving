@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title> event jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+</head>
+<body>
+	<h2 id="first">First!</h2>
+	<h2 id="second">Second!</h2>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$("#first").click(function () {
+			alert("First!");
+		});
+		$("#second").on("click", function () {
+			alert("Second!");
+		})
+	</script>
+</body>
+</html>

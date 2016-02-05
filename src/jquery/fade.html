@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title> fade in/out jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+</head>
+<body>
+	<input id="in" type="button" value="FADE IN" />
+	<input id="out" type="button" value="FADE OUT" />
+	<input id="toggle" type="button" value="FADE TOGGLE" />
+
+	<h1 id="helloworld">Hello World!</h1>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$("body").on("click", "#in", function() {
+			$("h1").fadeIn(1000);
+		});
+		$("body").on("click", "#out", function() {
+			$("h1").fadeOut("slow");
+		});
+		$("body").on("click", "#toggle", function() {
+			$("h1").fadeToggle("fast");
+		});
+	</script>
+</body>
+</html>

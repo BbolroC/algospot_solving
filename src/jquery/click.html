@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title> click/dbclick jquery API example </title>
+	<meta http-equiv="Content-type" content="text/html; charset=EUC-KR">
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<h1 id="first">First!</h1>
+	<input id="text" type="text" />
+	<input id="check" type="checkbox" />
+	<script>
+		$("body").on("click", "#first", function() {
+			alert("H1 click");
+		});
+		$("body").on("click", "#text", function() {
+			alert("textbox click");
+		});
+		$("body").on("click", "#check", function() {
+			alert("checkbox click");
+		})
+	</script>
+</body>
+</html>
