@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+javac Solution.java && java Solution
