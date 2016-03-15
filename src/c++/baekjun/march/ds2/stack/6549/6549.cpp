@@ -1,33 +1,32 @@
-#include <iostream>
+#include <cstdio>
 #include <stack>
-#include <vector>
 using namespace std;
 
 int h[100000];
-long long int area[100000];
-
-long long int maxSquare(int n) {
+long long maxSquare(int n) {
 	stack<int> st;
+	long long ans = 0;
 	for (int i = 0; i < n; i++) {
-		if (i == 0) st.push(i);
-		else {
-			if (!st.empty()) {
-				auto t = st.top();
-				int j = 1;
-				while (h[t] > h[i]) {
-					int right = t;
-					int k = 1;
-					while (h[i - k] >= h[t]) idx++;
-					int left = i - k;
-					area[t] = h[t] * (right - left);
-					st.pop();
-				}
-				st.push(i);
-				}
-			}	
+		while (!st.empty() && h[st.top()] > h[i]) {
+			long long height = h[st.top()];
+			st.pop();
+			long long width = i;
+			if (!st.empty()) width = i - st.top() - 1;
+			long long area = width * height;
+			if (area > ans) ans = area;
 		}
+		st.push(i);
 	}
-	return 0LL;
+	// At the end of the arrary
+	while (!st.empty()) {
+		long long height = h[st.top()];
+		st.pop();
+		long long width = n;
+		if (!st.empty()) width = n - st.top() - 1;
+	 	long long area = width * height;
+		if (area > ans) ans = area;
+	}
+	return ans;
 }
 
 int main() {
@@ -40,4 +39,5 @@ int main() {
 		}
 		printf("%lld\n", maxSquare(n));
 	}
+	return 0;
 }
