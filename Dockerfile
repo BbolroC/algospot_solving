@@ -34,4 +34,4 @@ WORKDIR /home/bbolroc/algospot/
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 RUN git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-RUN printf "execute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nset nu\nset tabstop=4\nset shiftwidth=4\nset smartindent\nset hlsearch\nnnoremap <space> i<space><esc>l\ncolorscheme darkblue\nmap ,1 :b!1<cr>\nmap ,2 :b!2<cr>\nmap ,3 :b!3<cr>\nmap ,4 :b!4<cr>\nmap ,5 :b!5<cr>\nmap ,6 :b!6<cr>\nmap ,7 :b!7<cr>\nmap ,8 :b!8<cr>\nmap ,9 :b!9<cr>\nmap ,0 :b!10<cr>\nmap ,x :bn!<cr>\nmap ,z :bp!<cr>\nmap ,w :bw!<cr>\n" > /home/bbolroc/.vimrc
+RUN printf "execute pathogen#infect()\nsyntax on\nfiletype plugin indent on\nset nu\nset tabstop=4\nset shiftwidth=4\nset smartindent\nset hlsearch\nnnoremap <space> i<space><esc>l\ncolorscheme default\nmap ,1 :b!1<cr>\nmap ,2 :b!2<cr>\nmap ,3 :b!3<cr>\nmap ,4 :b!4<cr>\nmap ,5 :b!5<cr>\nmap ,6 :b!6<cr>\nmap ,7 :b!7<cr>\nmap ,8 :b!8<cr>\nmap ,9 :b!9<cr>\nmap ,0 :b!10<cr>\nmap ,x :bn!<cr>\nmap ,z :bp!<cr>\nmap ,w :bw!<cr>\n" > /home/bbolroc/.vimrc
